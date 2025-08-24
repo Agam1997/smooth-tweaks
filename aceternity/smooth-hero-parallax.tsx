@@ -9,11 +9,11 @@ interface Project {
   thumbnail: string;
 }
 
-interface EnhancedHeroParallaxProps {
+interface SmoothHeroParallaxProps {
   projects?: Project[];
 }
 
-const EnhancedHeroParallax: React.FC<EnhancedHeroParallaxProps> = ({ projects = [] }) => {
+const SmoothHeroParallax: React.FC<SmoothHeroParallaxProps> = ({ projects = [] }) => {
   const [scrollY, setScrollY] = useState(0);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
@@ -266,4 +266,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, scrollY }) =>
   );
 };
 
-export default EnhancedHeroParallax;
+export default SmoothHeroParallax;
